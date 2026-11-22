@@ -376,4 +376,22 @@
     <string name="script_param_below_min">Must be at least %d</string>
     <string name="script_param_above_max">Must be at most %d</string>
     <string name="script_param_invalid">Invalid value</string>
+    <!-- Features / Shizuku -->
+    <string name="features">Features</string>
+    <string name="shizuku">Shizuku</string>
+    <string name="feature_native_settings">Native Settings</string>
+    <string name="feature_native_settings_summary">Open the stock Android settings</string>
+    <string name="feature_native_settings_failed">Unable to open native settings</string>
+    <string name="shizuku_summary">Shizuku lets apps run ADB-level commands without root. Use it as a fallback channel when the device restricts a feature.</string>
+    <string name="shizuku_installed">Installed</string>
+    <string name="shizuku_not_installed">Not installed</string>
+    <string name="shizuku_running">Service running</string>
+    <string name="shizuku_not_running">Service not running</string>
+    <string name="shizuku_granted">Permission granted</string>
+    <string name="shizuku_denied">Permission not granted</string>
+    <string name="shizuku_request_permission">Request permission</string>
+    <string name="shizuku_open_app">Open Shizuku</string>
+    <string name="shizuku_label_installed">Installation</string>
+    <string name="shizuku_label_running">Service</string>
+    <string name="shizuku_label_permission">Permission</string>
 </resources>

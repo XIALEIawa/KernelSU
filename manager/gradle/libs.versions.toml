@@ -24,6 +24,7 @@ appiconloader = "1.5.0"
 protobuf = "4.36.1"
 commons-compress = "1.28.0"
 xz = "1.12"
+shizuku = "13.1.5"
 
 [plugins]
 agp-app = { id = "com.android.application", version.ref = "agp" }
@@ -92,4 +93,6 @@ appiconloader = { module = "me.zhanghai.android.appiconloader:appiconloader", ve
 protobuf-kotlin-lite = { module = "com.google.protobuf:protobuf-kotlin-lite", version.ref = "protobuf" }
 protobuf-protoc = { module = "com.google.protobuf:protoc", version.ref = "protobuf" }
 commons-compress = { module = "org.apache.commons:commons-compress", version.ref = "commons-compress" }
+shizuku-api = { module = "dev.rikka.shizuku:api", version.ref = "shizuku" }
+shizuku-provider = { module = "dev.rikka.shizuku:provider", version.ref = "shizuku" }
 xz = { module = "org.tukaani:xz", version.ref = "xz" }

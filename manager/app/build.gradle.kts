@@ -243,6 +243,9 @@ dependencies {
     implementation(libs.xz)
     implementation(libs.protobuf.kotlin.lite)
 
+    implementation(libs.shizuku.api)
+    implementation(libs.shizuku.provider)
+
     testImplementation(libs.junit)
 }
 
