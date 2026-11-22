@@ -544,7 +544,10 @@ private fun InfoCard(
         modifier = modifier,
         verticalArrangement = Arrangement.spacedBy(12.dp),
     ) {
-        Card(modifier = Modifier.fillMaxWidth()) {
+        Card(
+            modifier = Modifier.fillMaxWidth(),
+            colors = CardDefaults.defaultColors(color = Color.Transparent),
+        ) {
             Column(modifier = Modifier.padding(16.dp)) {
                 InfoText(
                     icon = Icons.Filled.Tag,
@@ -569,7 +572,10 @@ private fun InfoCard(
                 )
             }
         }
-        Card(modifier = Modifier.fillMaxWidth()) {
+        Card(
+            modifier = Modifier.fillMaxWidth(),
+            colors = CardDefaults.defaultColors(color = Color.Transparent),
+        ) {
             Column(modifier = Modifier.padding(16.dp)) {
                 InfoText(
                     icon = Icons.Filled.Security,

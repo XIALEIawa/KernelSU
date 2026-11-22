@@ -223,7 +223,7 @@ class MainActivity : ComponentActivity() {
 
                     val navDisplay = @Composable {
                         Box(modifier = Modifier.fillMaxSize()) {
-                            AppBackground(scrimAlpha = 0.30f)
+                            AppBackground(scrimAlpha = 0.22f)
                             NavDisplay(
                             backStack = navigator.backStack,
                             effects = NavDisplayEffects(cornerClipRadius = rememberNavSystemCornerRadius()),
@@ -381,10 +381,9 @@ fun MainScreen(
         NavigationBadgeState()
     }
     val uiMode = LocalUiMode.current
-    val surfaceColor = when (uiMode) {
-        UiMode.Material -> MaterialTheme.colorScheme.surface // Blur is not used in Material, this is just a placeholder
-        UiMode.Miuix -> MiuixTheme.colorScheme.surface
-    }
+    // The wallpaper lives under the whole activity, so the blur backdrop must not paint an
+    // opaque surface over it.
+    val surfaceColor = Color.Transparent
     val blurBackdrop = rememberBlurBackdrop(enableBlur)
 
     val backdrop = rememberLayerBackdrop {
