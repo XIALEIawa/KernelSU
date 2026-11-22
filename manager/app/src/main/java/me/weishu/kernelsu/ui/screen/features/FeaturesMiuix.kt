@@ -26,6 +26,9 @@ import top.yukonga.miuix.kmp.basic.MiuixScrollBehavior
 import top.yukonga.miuix.kmp.basic.Scaffold
 import top.yukonga.miuix.kmp.basic.TopAppBar
 import top.yukonga.miuix.kmp.theme.MiuixTheme.colorScheme
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
+import me.weishu.kernelsu.ui.component.AppBackground
 
 @Composable
 internal fun FeaturesMiuix(
@@ -45,6 +48,8 @@ internal fun FeaturesMiuix(
         contentWindowInsets = WindowInsets.systemBars.add(WindowInsets.displayCutout)
             .only(WindowInsetsSides.Horizontal),
     ) { innerPadding ->
+            Box(modifier = Modifier.fillMaxSize()) {
+                AppBackground()
         LazyColumn(
             modifier = Modifier
                 .fillMaxHeight()
@@ -78,5 +83,7 @@ internal fun FeaturesMiuix(
                 }
             }
         }
-    }
+    
+            }
+}
 }

@@ -154,6 +154,7 @@ import top.yukonga.miuix.kmp.overlay.OverlayListPopup
 import top.yukonga.miuix.kmp.theme.MiuixTheme.colorScheme
 import top.yukonga.miuix.kmp.utils.overScrollVertical
 import top.yukonga.miuix.kmp.utils.scrollEndHaptic
+import me.weishu.kernelsu.ui.component.AppBackground
 
 @SuppressLint("StringFormatInvalid", "LocalContextGetResourceValueCall")
 @Composable
@@ -456,6 +457,8 @@ fun ModulePagerMiuix(
         },
         contentWindowInsets = WindowInsets.systemBars.add(WindowInsets.displayCutout).only(WindowInsetsSides.Horizontal)
     ) { innerPadding ->
+            Box(modifier = Modifier.fillMaxSize()) {
+                AppBackground()
         if (uiState.magiskInstalled) {
             Box(
                 modifier = Modifier
@@ -547,7 +550,9 @@ fun ModulePagerMiuix(
                 }
             }
         }
-    }
+    
+            }
+}
     ModuleShortcutDialog(
         show = showShortcutDialog.value,
         onDismissRequest = { showShortcutDialog.value = false },

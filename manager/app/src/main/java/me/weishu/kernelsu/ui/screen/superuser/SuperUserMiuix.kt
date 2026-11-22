@@ -102,6 +102,7 @@ import top.yukonga.miuix.kmp.overlay.OverlayListPopup
 import top.yukonga.miuix.kmp.theme.MiuixTheme.colorScheme
 import top.yukonga.miuix.kmp.utils.overScrollVertical
 import top.yukonga.miuix.kmp.utils.scrollEndHaptic
+import me.weishu.kernelsu.ui.component.AppBackground
 
 @Composable
 fun SuperUserPagerMiuix(
@@ -397,6 +398,8 @@ fun SuperUserPagerMiuix(
         },
         contentWindowInsets = WindowInsets.systemBars.add(WindowInsets.displayCutout).only(WindowInsetsSides.Horizontal)
     ) { innerPadding ->
+            Box(modifier = Modifier.fillMaxSize()) {
+                AppBackground()
         val layoutDirection = LocalLayoutDirection.current
         val lazyListState = rememberLazyListState()
         searchStatus.SearchBox {
@@ -484,7 +487,9 @@ fun SuperUserPagerMiuix(
                 }
             }
         }
-    }
+    
+            }
+}
 }
 
 @Composable
