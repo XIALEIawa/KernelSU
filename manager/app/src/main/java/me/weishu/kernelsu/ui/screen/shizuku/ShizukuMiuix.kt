@@ -104,6 +104,11 @@ internal fun ShizukuMiuix(
                         onClick = onRequestPermission,
                     )
                     BasicComponent(
+                        title = stringResource(R.string.shizuku_start),
+                        summary = stringResource(R.string.shizuku_start_summary),
+                        onClick = onOpenApp,
+                    )
+                    BasicComponent(
                         title = stringResource(R.string.shizuku_open_app),
                         onClick = onOpenApp,
                     )

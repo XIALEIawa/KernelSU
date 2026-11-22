@@ -394,4 +394,18 @@
     <string name="shizuku_label_installed">Installation</string>
     <string name="shizuku_label_running">Service</string>
     <string name="shizuku_label_permission">Permission</string>
+    <string name="feature_install_apk">Install APK</string>
+    <string name="feature_install_apk_summary">Bypass install restrictions via su or znxxinstall</string>
+    <string name="feature_ota">Query and download OTA</string>
+    <string name="feature_ota_summary">Download full and incremental packages for this device</string>
+    <string name="install_via_root">Install via root</string>
+    <string name="install_via_znxx">Install via znxxinstall</string>
+    <string name="install_pick_apk">Choose APK</string>
+    <string name="install_start">Install</string>
+    <string name="install_none_selected">No APK selected</string>
+    <string name="install_running">Installing…</string>
+    <string name="feature_back">Back</string>
+    <string name="feature_placeholder">Not implemented yet</string>
+    <string name="shizuku_start">Start Shizuku</string>
+    <string name="shizuku_start_summary">Launch the Shizuku app so its service starts</string>
 </resources>

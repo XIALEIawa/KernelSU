@@ -388,4 +388,18 @@
     <string name="shizuku_label_installed">安装状态</string>
     <string name="shizuku_label_running">服务状态</string>
     <string name="shizuku_label_permission">权限状态</string>
+    <string name="feature_install_apk">安装apk</string>
+    <string name="feature_install_apk_summary">通过su或znxxinstall突破安装限制</string>
+    <string name="feature_ota">查询并下载OTA</string>
+    <string name="feature_ota_summary">下载设备的全量包和差分包</string>
+    <string name="install_via_root">通过root安装</string>
+    <string name="install_via_znxx">通过znxxinstall</string>
+    <string name="install_pick_apk">选择apk</string>
+    <string name="install_start">安装</string>
+    <string name="install_none_selected">未选择apk</string>
+    <string name="install_running">正在安装…</string>
+    <string name="feature_back">返回</string>
+    <string name="feature_placeholder">暂未实现</string>
+    <string name="shizuku_start">启动 Shizuku</string>
+    <string name="shizuku_start_summary">拉起 Shizuku 应用，让它的服务启动</string>
 </resources>

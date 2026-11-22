@@ -76,6 +76,8 @@ internal fun ShizukuMaterial(
                 Card(modifier = Modifier.fillMaxWidth().padding(top = 12.dp)) {
                     ActionRow(stringResource(R.string.shizuku_request_permission), onRequestPermission)
                     HorizontalDivider()
+                    ActionRow(stringResource(R.string.shizuku_start), onOpenApp)
+                    HorizontalDivider()
                     ActionRow(stringResource(R.string.shizuku_open_app), onOpenApp)
                 }
             }
