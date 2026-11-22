@@ -118,6 +118,9 @@ import top.yukonga.miuix.kmp.utils.PagerGestureNestedScrollConnection
 import top.yukonga.miuix.kmp.utils.PagerInterceptionMode
 import top.yukonga.miuix.kmp.utils.PagerNavigationSpringSpec
 import top.yukonga.miuix.kmp.utils.pagerGestureOverride
+import androidx.compose.ui.graphics.Color
+import androidx.compose.foundation.layout.fillMaxSize
+import me.weishu.kernelsu.ui.component.AppBackground
 
 class MainActivity : ComponentActivity() {
 
@@ -219,7 +222,9 @@ class MainActivity : ComponentActivity() {
                     }
 
                     val navDisplay = @Composable {
-                        NavDisplay(
+                        Box(modifier = Modifier.fillMaxSize()) {
+                            AppBackground(scrimAlpha = 0.30f)
+                            NavDisplay(
                             backStack = navigator.backStack,
                             effects = NavDisplayEffects(cornerClipRadius = rememberNavSystemCornerRadius()),
                             onBack = {
@@ -271,15 +276,16 @@ class MainActivity : ComponentActivity() {
                             entry<Route.SuperUser>(swipeDismiss = swipeDismiss) { mainScreenEntry() }
                             entry<Route.Module>(swipeDismiss = swipeDismiss) { mainScreenEntry() }
                             entry<Route.Settings>(swipeDismiss = swipeDismiss) { mainScreenEntry() }
+                            }
                         }
                     }
 
                     when (uiMode) {
                         UiMode.Material -> androidx.compose.material3.Scaffold(
-                            containerColor = MaterialTheme.colorScheme.surfaceContainer
+                            containerColor = Color.Transparent
                         ) { navDisplay() }
 
-                        UiMode.Miuix -> Scaffold { navDisplay() }
+                        UiMode.Miuix -> Scaffold(containerColor = Color.Transparent) { navDisplay() }
                     }
                     SideEffect { contentReady = true }
                 }

@@ -116,7 +116,7 @@ fun SulogScreenMiuix(
     }
     val backdrop = rememberBlurBackdrop(enableBlur)
     val blurActive = backdrop != null
-    val barColor = if (blurActive) Color.Transparent else colorScheme.surface
+    val barColor = Color.Transparent
     val pullToRefreshState = rememberPullToRefreshState()
     val listState = rememberLazyListState()
     val fileSelector = buildSulogFileSelector(state.files, state.selectedFilePath)
@@ -150,6 +150,7 @@ fun SulogScreenMiuix(
     )
 
     Scaffold(
+        containerColor = Color.Transparent,
         topBar = {
             BlurredBar(backdrop) {
                 searchStatus.TopAppBarAnim(backgroundColor = barColor) {

@@ -78,12 +78,13 @@ fun SettingPagerMiuix(
     val enableBlur = LocalEnableBlur.current
     val backdrop = rememberBlurBackdrop(enableBlur)
     val blurActive = backdrop != null
-    val barColor = if (blurActive) Color.Transparent else colorScheme.surface
+    val barColor = Color.Transparent
     val loadingDialog = rememberLoadingDialog()
     val showUninstallDialog = rememberSaveable { mutableStateOf(false) }
     val showSendLogDialog = rememberSaveable { mutableStateOf(false) }
 
     Scaffold(
+        containerColor = Color.Transparent,
         topBar = {
             BlurredBar(backdrop) {
                 TopAppBar(
@@ -97,7 +98,6 @@ fun SettingPagerMiuix(
         contentWindowInsets = WindowInsets.systemBars.add(WindowInsets.displayCutout).only(WindowInsetsSides.Horizontal),
     ) { innerPadding ->
         Box(modifier = if (backdrop != null) Modifier.layerBackdrop(backdrop) else Modifier) {
-            AppBackground()
             LazyColumn(
                 modifier = Modifier
                     .fillMaxHeight()

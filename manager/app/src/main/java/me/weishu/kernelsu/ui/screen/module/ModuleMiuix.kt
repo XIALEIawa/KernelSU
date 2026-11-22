@@ -258,9 +258,10 @@ fun ModulePagerMiuix(
 
     val backdrop = rememberBlurBackdrop(enableBlur)
     val blurActive = backdrop != null
-    val barColor = if (blurActive) Color.Transparent else colorScheme.surface
+    val barColor = Color.Transparent
 
     Scaffold(
+        containerColor = Color.Transparent,
         topBar = {
             BlurredBar(backdrop) {
                 searchStatus.TopAppBarAnim(backgroundColor = barColor) {
@@ -458,7 +459,6 @@ fun ModulePagerMiuix(
         contentWindowInsets = WindowInsets.systemBars.add(WindowInsets.displayCutout).only(WindowInsetsSides.Horizontal)
     ) { innerPadding ->
             Box(modifier = Modifier.fillMaxSize()) {
-                AppBackground()
         if (uiState.magiskInstalled) {
             Box(
                 modifier = Modifier

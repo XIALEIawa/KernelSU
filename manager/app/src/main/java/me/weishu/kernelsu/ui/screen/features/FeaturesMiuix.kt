@@ -38,6 +38,7 @@ internal fun FeaturesMiuix(
     val scrollBehavior = MiuixScrollBehavior()
 
     Scaffold(
+        containerColor = Color.Transparent,
         topBar = {
             TopAppBar(
                 title = stringResource(R.string.features),
@@ -49,7 +50,6 @@ internal fun FeaturesMiuix(
             .only(WindowInsetsSides.Horizontal),
     ) { innerPadding ->
             Box(modifier = Modifier.fillMaxSize()) {
-                AppBackground()
         LazyColumn(
             modifier = Modifier
                 .fillMaxHeight()

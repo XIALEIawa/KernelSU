@@ -38,6 +38,7 @@ internal fun ShizukuMiuix(
     val scrollBehavior = MiuixScrollBehavior()
 
     Scaffold(
+        containerColor = Color.Transparent,
         topBar = {
             TopAppBar(
                 title = stringResource(R.string.shizuku),
@@ -49,7 +50,6 @@ internal fun ShizukuMiuix(
             .only(WindowInsetsSides.Horizontal),
     ) { innerPadding ->
             Box(modifier = Modifier.fillMaxSize()) {
-                AppBackground()
         LazyColumn(
             modifier = Modifier
                 .fillMaxHeight()

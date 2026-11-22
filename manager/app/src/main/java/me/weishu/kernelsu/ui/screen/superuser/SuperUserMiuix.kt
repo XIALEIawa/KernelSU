@@ -121,9 +121,10 @@ fun SuperUserPagerMiuix(
 
     val backdrop = rememberBlurBackdrop(enableBlur)
     val blurActive = backdrop != null
-    val barColor = if (blurActive) Color.Transparent else colorScheme.surface
+    val barColor = Color.Transparent
 
     Scaffold(
+        containerColor = Color.Transparent,
         topBar = {
             BlurredBar(backdrop) {
                 searchStatus.TopAppBarAnim(backgroundColor = barColor) {
@@ -399,7 +400,6 @@ fun SuperUserPagerMiuix(
         contentWindowInsets = WindowInsets.systemBars.add(WindowInsets.displayCutout).only(WindowInsetsSides.Horizontal)
     ) { innerPadding ->
             Box(modifier = Modifier.fillMaxSize()) {
-                AppBackground()
         val layoutDirection = LocalLayoutDirection.current
         val lazyListState = rememberLazyListState()
         searchStatus.SearchBox {

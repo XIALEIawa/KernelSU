@@ -87,6 +87,7 @@ internal fun ScriptRunScreenMiuix(
     val barColor = if (backdrop != null) Color.Transparent else colorScheme.surface
 
     Scaffold(
+        containerColor = Color.Transparent,
         topBar = {
             TopBar(
                 onBack = actions.onBack,

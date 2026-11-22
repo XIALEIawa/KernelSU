@@ -103,8 +103,9 @@ fun HomePagerMiuix(
     val enableBlur = LocalEnableBlur.current
     val backdrop = rememberBlurBackdrop(enableBlur)
     val blurActive = backdrop != null
-    val barColor = if (blurActive) Color.Transparent else colorScheme.surface
+    val barColor = Color.Transparent
     Scaffold(
+        containerColor = Color.Transparent,
         topBar = {
             TopBar(
                 scrollBehavior = scrollBehavior,
@@ -116,7 +117,6 @@ fun HomePagerMiuix(
         contentWindowInsets = WindowInsets.systemBars.add(WindowInsets.displayCutout).only(WindowInsetsSides.Horizontal)
     ) { innerPadding ->
         Box(modifier = if (backdrop != null) Modifier.layerBackdrop(backdrop) else Modifier) {
-            AppBackground()
             LazyColumn(
                 modifier = Modifier
                     .fillMaxHeight()
