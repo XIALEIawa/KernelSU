@@ -66,7 +66,7 @@ internal fun ApkInstallPage(bottomInnerPadding: Dp, onBack: () -> Unit) {
 
     val scrollBehavior = MiuixScrollBehavior()
     Scaffold(
-        topBar = { TopAppBar(title = stringResource(R.string.feature_install_apk), scrollBehavior = scrollBehavior) },
+        topBar = { TopAppBar(title = stringResource(R.string.feature_install_apk), scrollBehavior = scrollBehavior, color = Color.Transparent) },
         popupHost = { },
         containerColor = Color.Transparent,
         contentWindowInsets = WindowInsets.systemBars.add(WindowInsets.displayCutout)
@@ -165,7 +165,7 @@ private suspend fun installApk(context: Context, uri: Uri): String = withContext
 internal fun OtaPage(bottomInnerPadding: Dp, onBack: () -> Unit) {
     val scrollBehavior = MiuixScrollBehavior()
     Scaffold(
-        topBar = { TopAppBar(title = stringResource(R.string.feature_ota), scrollBehavior = scrollBehavior) },
+        topBar = { TopAppBar(title = stringResource(R.string.feature_ota), scrollBehavior = scrollBehavior, color = Color.Transparent) },
         popupHost = { },
         containerColor = Color.Transparent,
         contentWindowInsets = WindowInsets.systemBars.add(WindowInsets.displayCutout)

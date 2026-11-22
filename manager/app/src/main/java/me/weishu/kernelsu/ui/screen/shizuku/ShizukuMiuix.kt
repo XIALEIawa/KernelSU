@@ -42,6 +42,7 @@ internal fun ShizukuMiuix(
         containerColor = Color.Transparent,
         topBar = {
             TopAppBar(
+                color = Color.Transparent,
                 title = stringResource(R.string.shizuku),
                 scrollBehavior = scrollBehavior,
             )

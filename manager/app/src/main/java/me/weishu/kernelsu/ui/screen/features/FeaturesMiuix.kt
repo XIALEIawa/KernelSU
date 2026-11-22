@@ -42,6 +42,7 @@ internal fun FeaturesMiuix(
         containerColor = Color.Transparent,
         topBar = {
             TopAppBar(
+                color = Color.Transparent,
                 title = stringResource(R.string.features),
                 scrollBehavior = scrollBehavior,
             )
