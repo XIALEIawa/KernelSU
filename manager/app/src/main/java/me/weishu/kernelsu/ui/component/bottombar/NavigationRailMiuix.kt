@@ -20,8 +20,6 @@ fun NavigationRailMiuix(
     navigationBadge: NavigationBadgeState,
     modifier: Modifier = Modifier,
 ) {
-    val fullFeatured = Natives.isFullFeatured()
-    if (!fullFeatured) return
 
     val mainState = LocalMainPagerState.current
 
