@@ -72,6 +72,9 @@ android {
             }
         }
         release {
+            // CI fork build: sign the release APK with the auto-generated debug key so the
+            // artifact is installable without configuring a keystore.
+            signingConfig = signingConfigs.getByName("debug")
             isMinifyEnabled = true
             isShrinkResources = true
             vcsInfo.include = false
